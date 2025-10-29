@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jhones Bomfim - Currículo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f5f5f5;
+        padding: 20px;
+      }
+
+      .resume-container {
+        max-width: 850px;
+        margin: 0 auto;
+        background: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .header .title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        opacity: 0.95;
+      }
+
+      .header .badges {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .badge {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        font-size: 14px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      .section {
+        margin-bottom: 35px;
+      }
+
+      .section-title {
+        font-size: 22px;
+        font-weight: 700;
+        color: #8b5cf6;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #8b5cf6;
+      }
+
+      .profile-text {
+        text-align: justify;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 15px;
+      }
+
+      .experience-item,
+      .education-item {
+        margin-bottom: 25px;
+        padding-left: 20px;
+        border-left: 3px solid #8b5cf6;
+      }
+
+      .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 8px;
+        flex-wrap: wrap;
+      }
+
+      .job-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #333;
+      }
+
+      .company {
+        font-size: 16px;
+        color: #8b5cf6;
+        font-weight: 600;
+      }
+
+      .period {
+        color: #666;
+        font-size: 14px;
+        font-style: italic;
+      }
+
+      .experience-item ul,
+      .education-item ul {
+        margin-top: 10px;
+        padding-left: 20px;
+      }
+
+      .experience-item li,
+      .education-item li {
+        margin-bottom: 8px;
+        color: #555;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .skill-category {
+        margin-bottom: 15px;
+      }
+
+      .skill-category h3 {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .skill-tag {
+        background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        color: white;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .education-item {
+        border-left-color: #fbbf24;
+      }
+
+      .education-item .degree {
+        font-size: 18px;
+        font-weight: 700;
+        color: #333;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .project-card {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 3px solid #8b5cf6;
+      }
+
+      .project-name {
+        font-size: 16px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 8px;
+      }
+
+      .project-desc {
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 10px;
+      }
+
+      .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .tech-badge {
+        background: #e0d4f7;
+        color: #6d28d9;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 11px;
+        font-weight: 500;
+      }
+
+      @media print {
+        body {
+          padding: 0;
+          background: white;
+        }
+        .resume-container {
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-container">
+      <!-- Header -->
+      <div class="header">
+        <h1>Jhones Bomfim</h1>
+        <div class="title">Engenheiro DevOps Sênior | SRE</div>
+        <div class="badges">
+          <span class="badge">DevOps</span>
+          <span class="badge">SRE</span>
+          <span class="badge">Arquitetura em Nuvem</span>
+        </div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>devjhones@outlook.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+55 51 998-989-961</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Porto Alegre, RS - Brasil</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Professional Summary -->
+        <div class="section">
+          <h2 class="section-title">Resumo Profissional</h2>
+          <p class="profile-text">
+            Profissional apaixonado por tecnologia e inovação, com formação
+            sólida em Ciência da Computação e Engenharia de Software (Bacharel)
+            e Tecnólogo em Desenvolvimento de Software. Com mais de 5 anos de
+            experiência na área, atualmente atuo como Engenheiro DevOps Sênior
+            na Conceptu, onde aplico minha expertise em automação,
+            infraestrutura como código e práticas de entrega contínua para
+            transformar desafios complexos em soluções eficientes e escaláveis.
+          </p>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+          <h2 class="section-title">Experiência Profissional</h2>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <div class="job-title">Engenheiro DevOps Sênior</div>
+                <div class="company">Conceptu</div>
+              </div>
+              <div class="period">2025 - Atual</div>
+            </div>
+            <ul>
+              <li>
+                Liderança de iniciativas de transformação DevOps em múltiplos
+                projetos
+              </li>
+              <li>
+                Implementação de pipelines CI/CD com GitHub Actions e GitLab
+              </li>
+              <li>Gestão de infraestrutura em nuvem AWS e Azure</li>
+              <li>Orquestração de aplicações containerizadas com Kubernetes</li>
+              <li>
+                Automação de processos de deploy e infraestrutura como código
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <div class="job-title">Engenheiro de Software</div>
+                <div class="company">SkyDrones</div>
+              </div>
+              <div class="period">2023 - 2025</div>
+            </div>
+            <ul>
+              <li>
+                Desenvolvimento de aplicações de controle de drones com QML e
+                C++
+              </li>
+              <li>Criação de firmwares embarcados com C, C++ e Lua</li>
+              <li>
+                Trabalho em sistemas de tempo real e programação de baixo nível
+              </li>
+              <li>
+                Implementação de protocolos de comunicação para sistemas de
+                drones
+              </li>
+              <li>Otimização de performance para dispositivos embarcados</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <div class="job-title">Desenvolvedor de Sistemas</div>
+                <div class="company">Vent Digital</div>
+              </div>
+              <div class="period">2020 - 2022</div>
+            </div>
+            <ul>
+              <li>
+                Desenvolvimento de aplicações web modernas com React e Next.js
+              </li>
+              <li>
+                Criação de aplicativos mobile multiplataforma usando React
+                Native
+              </li>
+              <li>Gerenciamento de deploys containerizados com Docker</li>
+              <li>Trabalho com plataformas de nuvem AWS e Azure</li>
+              <li>Orquestração de serviços usando Kubernetes (K8s)</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <div class="job-title">Estagiário em Desenvolvimento Web</div>
+                <div class="company">Programa de Estágio</div>
+              </div>
+              <div class="period">Mai 2016 - Dez 2016</div>
+            </div>
+            <ul>
+              <li>
+                Desenvolvimento de sites responsivos usando HTML, CSS e
+                JavaScript
+              </li>
+              <li>
+                Trabalho com bancos de dados MySQL e desenvolvimento backend em
+                PHP
+              </li>
+              <li>
+                Aquisição de habilidades fundamentais em desenvolvimento web
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+          <h2 class="section-title">Formação Acadêmica</h2>
+
+          <div class="education-item">
+            <div class="experience-header">
+              <div class="degree">Bacharelado em Engenharia de Software</div>
+              <div class="period">2024 - Atual</div>
+            </div>
+            <ul>
+              <li>Princípios avançados de engenharia de software</li>
+              <li>DevOps e arquiteturas cloud-native</li>
+              <li>Design de sistemas e padrões de escalabilidade</li>
+            </ul>
+          </div>
+
+          <div class="education-item">
+            <div class="experience-header">
+              <div class="degree">Bacharelado em Ciência da Computação</div>
+              <div class="period">2020 - 2024</div>
+            </div>
+            <ul>
+              <li>Fundamentos aprofundados de ciência da computação</li>
+              <li>Inteligência Artificial e Machine Learning</li>
+              <li>Estruturas de dados e algoritmos avançados</li>
+            </ul>
+          </div>
+
+          <div class="education-item">
+            <div class="experience-header">
+              <div class="degree">Tecnólogo em Desenvolvimento de Sistemas</div>
+              <div class="period">2018 - 2020</div>
+            </div>
+            <ul>
+              <li>Arquitetura de software e padrões de design</li>
+              <li>Gestão de bancos de dados e análise de sistemas</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+          <h2 class="section-title">Habilidades Técnicas</h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Cloud & DevOps</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Azure</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">GitHub Actions</span>
+                <span class="skill-tag">GitLab CI/CD</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Linguagens de Programação</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Lua</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Frameworks & Ferramentas</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">React Native</span>
+                <span class="skill-tag">Qt</span>
+                <span class="skill-tag">QML</span>
+                <span class="skill-tag">PowerShell</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Bancos de Dados</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Firebase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="section">
+          <h2 class="section-title">Projetos Principais</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-name">Ludiko Desktop</div>
+              <div class="project-desc">
+                Software de gestão escolar para administradores e coordenadores
+                com controle de aulas e relatórios.
+              </div>
+              <div class="project-tech">
+                <span class="tech-badge">C++</span>
+                <span class="tech-badge">Qt</span>
+                <span class="tech-badge">Python</span>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-name">Ludiko Mobile</div>
+              <div class="project-desc">
+                App para professores com planejamento de aulas, chamada e
+                assistente IA Da'Ra.
+              </div>
+              <div class="project-tech">
+                <span class="tech-badge">Kotlin</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">IA</span>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-name">Da'Ra IA</div>
+              <div class="project-desc">
+                Assistente de IA para profissionais da educação, auxiliando em
+                planos de aula e relatórios.
+              </div>
+              <div class="project-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">NLP</span>
+                <span class="tech-badge">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-name">InteligenCAM</div>
+              <div class="project-desc">
+                Sistema de câmeras com IA para segurança escolar com detecção de
+                comportamento.
+              </div>
+              <div class="project-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Azure</span>
+                <span class="tech-badge">Visão Computacional</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
