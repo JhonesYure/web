@@ -27,3 +27,37 @@ jobs:
         uses: actions/checkout@v4
       - name: lint
         run: echo "Running lint checks..."
+
+  tag_version:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check for .version file
+        id: check_version
+        run: |
+          if [ ! -f .version ]; then
+            echo "WARNING: The .version file does not exist in this commit."
+            exit 0
+          fi
+      - name: Read version
+        id: read_version
+        run: |
+          echo "version=$(cat .version)" >> $GITHUB_OUTPUT
+      - name: Set up git config
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions@github.com"
+      - name: Fetch tags
+        run: git fetch --tags origin
+      - name: Create and push tag
+        run: |
+          VERSION="${{ steps.read_version.outputs.version }}"
+          if git tag -l | grep -q "^${VERSION}$"; then
+            echo "Tag ${VERSION} already exists. Skipping tag creation."
+          else
+            echo "Creating and pushing tag ${VERSION}..."
+            git tag -a "$VERSION" -m "Release $VERSION"
+            git push origin "$VERSION"
+          fi
