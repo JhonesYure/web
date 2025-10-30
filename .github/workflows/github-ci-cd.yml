@@ -34,17 +34,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Check for .version file
         id: check_version
         run: |
           if [ ! -f .version ]; then
-            echo "WARNING: The .version file does not exist in this commit."
-            exit 0
+            echo "ERROR: The .version file does not exist in this commit."
+            exit 1
           fi
+          echo "Version file found"
       - name: Read version
         id: read_version
         run: |
           VERSION=$(cat .version | tr -d '[:space:]')
+          if [ -z "$VERSION" ]; then
+            echo "ERROR: Version is empty"
+            exit 1
+          fi
+          echo "Read version: $VERSION"
           echo "version=${VERSION}" >> $GITHUB_OUTPUT
       - name: Set up git config
         run: |
