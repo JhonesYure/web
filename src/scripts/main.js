@@ -75,15 +75,43 @@ projectCards.forEach((card) => {
     const projectId = card.getAttribute('data-project');
     const project = projectsData[projectId];
 
-    modalTitle.textContent = project.title;
+    // Try to use translated project content if available
+    let translated = null;
+    try {
+      if (
+        typeof translations !== 'undefined' &&
+        typeof currentLang !== 'undefined' &&
+        translations[currentLang] &&
+        translations[currentLang].projects &&
+        translations[currentLang].projects.items &&
+        translations[currentLang].projects.items[projectId]
+      ) {
+        translated = translations[currentLang].projects.items[projectId];
+      }
+    } catch (e) {
+      translated = null;
+    }
+
+    const titleText =
+      translated && translated.title ? translated.title : project.title;
+    const descriptionText =
+      translated && translated.description
+        ? translated.description
+        : project.description;
+    const techArray =
+      translated && translated.technologies
+        ? translated.technologies
+        : project.technologies;
+
+    modalTitle.textContent = titleText;
 
     // Create technologies tags HTML
-    const techTags = project.technologies
+    const techTags = (techArray || [])
       .map((tech) => `<span class="tech-tag">${tech}</span>`)
       .join('');
 
     modalBody.innerHTML = `
-            <p>${project.description}</p>
+            <p>${descriptionText}</p>
             <div class="tech-tags-container">
                 ${techTags}
             </div>

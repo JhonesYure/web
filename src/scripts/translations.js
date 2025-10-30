@@ -16,6 +16,45 @@ const translations = {
     },
     projects: {
       title: 'PROJECTS',
+      items: {
+        1: {
+          title: 'Ludiko Desktop',
+          description:
+            'A comprehensive school management software designed for administrators and coordinators. Ludiko Desktop provides complete control over applied classes, content tracking, detailed reporting, and much more.',
+          technologies: ['C++', 'Qt', 'Python'],
+        },
+        2: {
+          title: 'Ludiko Mobile',
+          description:
+            "The teacher's companion app designed to streamline classroom management. Ludiko Mobile enables educators to create lesson plans, take attendance, and generate reports.",
+          technologies: ['Kotlin', 'Node.js', 'MySQL', 'AI'],
+        },
+        3: {
+          title: 'Da´Ra',
+          description:
+            'An advanced AI assistant specifically designed for education professionals, focused on lesson planning, reporting and pedagogical support.',
+          technologies: ['Python', 'PostgreSQL', 'AI', 'NLP'],
+        },
+        4: {
+          title: 'SPPA',
+          description:
+            'A web-based dental implant simulation software that accelerates preliminary dental assessments by combining imaging analysis and simulation technology.',
+          technologies: ['React', 'Firebase', 'TypeScript', '3D Rendering'],
+        },
+        5: {
+          title: 'InteligenCAM',
+          description:
+            'An intelligent AI-powered camera system designed to enhance school safety by detecting aggressive behavior and notifying administration when critical events occur.',
+          technologies: [
+            'Python',
+            'Azure',
+            'Docker',
+            'Kubernetes',
+            'Computer Vision',
+            'AI',
+          ],
+        },
+      },
     },
     resume: {
       job1: {
@@ -100,6 +139,45 @@ const translations = {
     },
     projects: {
       title: 'PROJETOS',
+      items: {
+        1: {
+          title: 'Ludiko Desktop',
+          description:
+            'Um software completo de gestão escolar voltado para administradores e coordenadores. O Ludiko Desktop oferece controle de turmas, acompanhamento de conteúdo, relatórios detalhados e muito mais.',
+          technologies: ['C++', 'Qt', 'Python'],
+        },
+        2: {
+          title: 'Ludiko Mobile',
+          description:
+            'Aplicativo para professores que facilita o gerenciamento de sala de aula: criação de planos, chamada, geração de relatórios e integração com assistente AI.',
+          technologies: ['Kotlin', 'Node.js', 'MySQL', 'AI'],
+        },
+        3: {
+          title: 'Da´Ra',
+          description:
+            'Assistente de IA avançado focado em educação, auxiliando na criação de planos de aula, relatórios e suporte pedagógico.',
+          technologies: ['Python', 'PostgreSQL', 'AI', 'NLP'],
+        },
+        4: {
+          title: 'SPPA',
+          description:
+            'Software web de simulação de implante dentário que acelera avaliações prévias combinando análise de imagem e tecnologia de simulação.',
+          technologies: ['React', 'Firebase', 'TypeScript', '3D Rendering'],
+        },
+        5: {
+          title: 'InteligenCAM',
+          description:
+            'Sistema de câmera inteligente com IA voltado para segurança escolar, detectando comportamentos agressivos e notificando a administração quando necessário.',
+          technologies: [
+            'Python',
+            'Azure',
+            'Docker',
+            'Kubernetes',
+            'Computer Vision',
+            'AI',
+          ],
+        },
+      },
     },
     resume: {
       job1: {
