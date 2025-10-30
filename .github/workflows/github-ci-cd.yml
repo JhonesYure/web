@@ -32,32 +32,24 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/develop'
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: Check for .version file
         id: check_version
         run: |
           if [ ! -f .version ]; then
-            echo "ERROR: The .version file does not exist in this commit."
-            exit 1
+            echo "WARNING: The .version file does not exist in this commit."
+            exit 0
           fi
-          echo "Version file found"
       - name: Read version
         id: read_version
         run: |
-          VERSION=$(cat .version | tr -d '[:space:]')
-          if [ -z "$VERSION" ]; then
-            echo "ERROR: Version is empty"
-            exit 1
-          fi
-          echo "Read version: $VERSION"
-          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          VERSION=$(cat .version)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
       - name: Set up git config
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "github-actions@github.com"
+          git config user.name "JhonesYure"
+          git config user.email "jymbomfim@hotmail.com"
       - name: Fetch tags
         run: git fetch --tags origin
       - name: Create and push tag
@@ -67,6 +59,6 @@ jobs:
             echo "Tag ${VERSION} already exists. Skipping tag creation."
           else
             echo "Creating and pushing tag ${VERSION}..."
-            git tag -a "$VERSION" -m "Release $VERSION"
-            git push origin "$VERSION"
+            git tag -a "${VERSION}" -m "Release ${VERSION}"
+            git push origin "${VERSION}"
           fi
