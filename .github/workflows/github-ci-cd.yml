@@ -44,7 +44,8 @@ jobs:
       - name: Read version
         id: read_version
         run: |
-          echo "version=$(cat .version)" >> $GITHUB_OUTPUT
+          VERSION=$(cat .version | tr -d '[:space:]')
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
       - name: Set up git config
         run: |
           git config user.name "GitHub Actions"
