@@ -80,11 +80,34 @@
 
       <!-- Main Content (Right Side) -->
       <div class="main-content">
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="pt">PT-BR</button>
+        </div>
+
         <!-- Navigation -->
         <nav class="main-nav">
-          <button class="nav-btn active" data-section="about">ABOUT</button>
-          <button class="nav-btn" data-section="resume">RESUME</button>
-          <button class="nav-btn" data-section="download">DOWNLOAD</button>
+          <button
+            class="nav-btn active"
+            data-section="about"
+            data-translate="nav.about"
+          >
+            ABOUT
+          </button>
+          <button
+            class="nav-btn"
+            data-section="resume"
+            data-translate="nav.resume"
+          >
+            RESUME
+          </button>
+          <button
+            class="nav-btn"
+            data-section="download"
+            data-translate="nav.download"
+          >
+            DOWNLOAD
+          </button>
         </nav>
 
         <!-- Content Box -->
@@ -92,8 +115,8 @@
           <!-- About Section -->
           <section id="about" class="content-section active">
             <div class="about-content">
-              <h2>Who am I?</h2>
-              <p>
+              <h2 data-translate="about.title1">Who am I?</h2>
+              <p data-translate="about.text1">
                 I am a technology and innovation enthusiast with a solid
                 background in Computer Science and Software Engineering
                 (Bachelor's degree) and an Associate degree in Software
@@ -104,8 +127,8 @@
                 into efficient and scalable solutions.
               </p>
 
-              <h2>Technical Expertise</h2>
-              <p>
+              <h2 data-translate="about.title2">Technical Expertise</h2>
+              <p data-translate="about.text2">
                 Throughout my professional journey, I have developed diverse
                 technical skills that enable me to work on different fronts. I
                 master essential tools and platforms such as Kubernetes, Docker,
@@ -122,7 +145,7 @@
 
             <!-- Projects Section -->
             <div class="projects-section">
-              <h2>PROJECTS</h2>
+              <h2 data-translate="projects.title">PROJECTS</h2>
               <div class="projects-grid">
                 <div class="project-card" data-project="1">
                   <div class="project-image">
@@ -168,18 +191,28 @@
               <div class="timeline-item">
                 <div class="timeline-dot current-dot"></div>
                 <div class="timeline-content current-content">
-                  <h3 class="timeline-title">
+                  <h3 class="timeline-title" data-translate="resume.job1.title">
                     Senior DevOps Engineer - Conceptu
                   </h3>
-                  <span class="timeline-period">2025 - Present</span>
+                  <span
+                    class="timeline-period"
+                    data-translate="resume.job1.period"
+                    >2025 - Present</span
+                  >
                   <ul class="timeline-list">
-                    <li>Leading DevOps transformation initiatives</li>
-                    <li>Implementing CI/CD pipelines with GitHub and GitLab</li>
-                    <li>Managing cloud infrastructure on AWS and Azure</li>
-                    <li>
+                    <li data-translate="resume.job1.desc1">
+                      Leading DevOps transformation initiatives
+                    </li>
+                    <li data-translate="resume.job1.desc2">
+                      Implementing CI/CD pipelines with GitHub and GitLab
+                    </li>
+                    <li data-translate="resume.job1.desc3">
+                      Managing cloud infrastructure on AWS and Azure
+                    </li>
+                    <li data-translate="resume.job1.desc4">
                       Orchestrating containerized applications with Kubernetes
                     </li>
-                    <li>
+                    <li data-translate="resume.job1.desc5">
                       Automating deployment processes and infrastructure as code
                     </li>
                   </ul>
@@ -190,17 +223,25 @@
               <div class="timeline-item timeline-education">
                 <div class="timeline-dot education-dot"></div>
                 <div class="timeline-content education-content">
-                  <h3 class="timeline-title">
+                  <h3 class="timeline-title" data-translate="resume.edu1.title">
                     🎓 Bachelor's in Software Engineering
                   </h3>
-                  <span class="timeline-period">2024 - Present</span>
+                  <span
+                    class="timeline-period"
+                    data-translate="resume.edu1.period"
+                    >2024 - Present</span
+                  >
                   <ul class="timeline-list">
-                    <li>
+                    <li data-translate="resume.edu1.desc1">
                       Currently studying advanced software engineering
                       principles
                     </li>
-                    <li>DevOps and cloud-native architectures</li>
-                    <li>System design and scalability patterns</li>
+                    <li data-translate="resume.edu1.desc2">
+                      DevOps and cloud-native architectures
+                    </li>
+                    <li data-translate="resume.edu1.desc3">
+                      System design and scalability patterns
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -209,20 +250,30 @@
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                  <h3 class="timeline-title">Software Engineer - SkyDrones</h3>
-                  <span class="timeline-period">2023 - 2025</span>
+                  <h3 class="timeline-title" data-translate="resume.job2.title">
+                    Software Engineer - SkyDrones
+                  </h3>
+                  <span
+                    class="timeline-period"
+                    data-translate="resume.job2.period"
+                    >2023 - 2025</span
+                  >
                   <ul class="timeline-list">
-                    <li>
+                    <li data-translate="resume.job2.desc1">
                       Developed drone control applications using QML and C++
                     </li>
-                    <li>Created embedded firmware with C, C++, and Lua</li>
-                    <li>
+                    <li data-translate="resume.job2.desc2">
+                      Created embedded firmware with C, C++, and Lua
+                    </li>
+                    <li data-translate="resume.job2.desc3">
                       Worked on real-time systems and low-level programming
                     </li>
-                    <li>
+                    <li data-translate="resume.job2.desc4">
                       Implemented communication protocols for drone systems
                     </li>
-                    <li>Optimized performance for embedded devices</li>
+                    <li data-translate="resume.job2.desc5">
+                      Optimized performance for embedded devices
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -231,15 +282,27 @@
               <div class="timeline-item timeline-education">
                 <div class="timeline-dot education-dot"></div>
                 <div class="timeline-content education-content">
-                  <h3 class="timeline-title">
+                  <h3 class="timeline-title" data-translate="resume.edu2.title">
                     🎓 Bachelor's in Computer Science
                   </h3>
-                  <span class="timeline-period">2020 - 2024</span>
+                  <span
+                    class="timeline-period"
+                    data-translate="resume.edu2.period"
+                    >2020 - 2024</span
+                  >
                   <ul class="timeline-list">
-                    <li>Deep dive into computer science fundamentals</li>
-                    <li>Artificial Intelligence and Machine Learning</li>
-                    <li>Advanced data structures and algorithms</li>
-                    <li>Software engineering methodologies</li>
+                    <li data-translate="resume.edu2.desc1">
+                      Deep dive into computer science fundamentals
+                    </li>
+                    <li data-translate="resume.edu2.desc2">
+                      Artificial Intelligence and Machine Learning
+                    </li>
+                    <li data-translate="resume.edu2.desc3">
+                      Advanced data structures and algorithms
+                    </li>
+                    <li data-translate="resume.edu2.desc4">
+                      Software engineering methodologies
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -248,20 +311,30 @@
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                  <h3 class="timeline-title">
+                  <h3 class="timeline-title" data-translate="resume.job3.title">
                     Systems Developer - Vent Digital
                   </h3>
-                  <span class="timeline-period">2020 - 2022</span>
+                  <span
+                    class="timeline-period"
+                    data-translate="resume.job3.period"
+                    >2020 - 2022</span
+                  >
                   <ul class="timeline-list">
-                    <li>
+                    <li data-translate="resume.job3.desc1">
                       Built modern web applications with React and Next.js
                     </li>
-                    <li>
+                    <li data-translate="resume.job3.desc2">
                       Developed cross-platform mobile apps using React Native
                     </li>
-                    <li>Managed containerized deployments with Docker</li>
-                    <li>Worked with cloud platforms AWS and Azure</li>
-                    <li>Orchestrated services using Kubernetes (K8s)</li>
+                    <li data-translate="resume.job3.desc3">
+                      Managed containerized deployments with Docker
+                    </li>
+                    <li data-translate="resume.job3.desc4">
+                      Worked with cloud platforms AWS and Azure
+                    </li>
+                    <li data-translate="resume.job3.desc5">
+                      Orchestrated services using Kubernetes (K8s)
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -270,14 +343,24 @@
               <div class="timeline-item timeline-education">
                 <div class="timeline-dot education-dot"></div>
                 <div class="timeline-content education-content">
-                  <h3 class="timeline-title">
+                  <h3 class="timeline-title" data-translate="resume.edu3.title">
                     🎓 Associate Degree in Systems Development
                   </h3>
-                  <span class="timeline-period">2018 - 2020</span>
+                  <span
+                    class="timeline-period"
+                    data-translate="resume.edu3.period"
+                    >2018 - 2020</span
+                  >
                   <ul class="timeline-list">
-                    <li>Studied software architecture and design patterns</li>
-                    <li>Advanced programming concepts and algorithms</li>
-                    <li>Database management and system analysis</li>
+                    <li data-translate="resume.edu3.desc1">
+                      Studied software architecture and design patterns
+                    </li>
+                    <li data-translate="resume.edu3.desc2">
+                      Advanced programming concepts and algorithms
+                    </li>
+                    <li data-translate="resume.edu3.desc3">
+                      Database management and system analysis
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -286,18 +369,26 @@
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                  <h3 class="timeline-title">Website Development Intern</h3>
-                  <span class="timeline-period">May 2016 - Dec 2016</span>
+                  <h3 class="timeline-title" data-translate="resume.job4.title">
+                    Website Development Intern
+                  </h3>
+                  <span
+                    class="timeline-period"
+                    data-translate="resume.job4.period"
+                    >May 2016 - Dec 2016</span
+                  >
                   <ul class="timeline-list">
-                    <li>
+                    <li data-translate="resume.job4.desc1">
                       Developed responsive websites using HTML, CSS, and
                       JavaScript
                     </li>
-                    <li>
+                    <li data-translate="resume.job4.desc2">
                       Worked with MySQL databases and PHP backend development
                     </li>
-                    <li>Gained foundational web development skills</li>
-                    <li>
+                    <li data-translate="resume.job4.desc3">
+                      Gained foundational web development skills
+                    </li>
+                    <li data-translate="resume.job4.desc4">
                       Collaborated with design team on UI/UX implementations
                     </li>
                   </ul>
@@ -310,8 +401,10 @@
           <section id="download" class="content-section">
             <div class="download-container">
               <div class="download-header">
-                <h2>Download Resume</h2>
-                <p>Get my complete resume in your preferred language</p>
+                <h2 data-translate="download.title">Download Resume</h2>
+                <p data-translate="download.subtitle">
+                  Get my complete resume in your preferred language
+                </p>
               </div>
 
               <div class="download-buttons">
@@ -320,7 +413,9 @@
                     <i class="fas fa-file-pdf"></i>
                   </div>
                   <div class="download-info">
-                    <span class="download-title">English Version</span>
+                    <span class="download-title" data-translate="download.btnEn"
+                      >English Version</span
+                    >
                     <span class="download-subtitle">Resume - EN.pdf</span>
                   </div>
                   <div class="download-arrow">
@@ -333,7 +428,9 @@
                     <i class="fas fa-file-pdf"></i>
                   </div>
                   <div class="download-info">
-                    <span class="download-title">Versão em Português</span>
+                    <span class="download-title" data-translate="download.btnPt"
+                      >Versão em Português</span
+                    >
                     <span class="download-subtitle">Currículo - PT-BR.pdf</span>
                   </div>
                   <div class="download-arrow">
@@ -344,7 +441,9 @@
 
               <div class="download-note">
                 <i class="fas fa-info-circle"></i>
-                <span>Last updated: October 2025</span>
+                <span data-translate="download.lastUpdated"
+                  >Last updated: October 2025</span
+                >
               </div>
             </div>
           </section>
@@ -369,6 +468,7 @@
       </div>
     </div>
 
+    <script src="../scripts/translations.js"></script>
     <script src="../scripts/main.js"></script>
   </body>
 </html>

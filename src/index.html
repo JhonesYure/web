@@ -80,11 +80,35 @@
 
       <!-- Main Content (Right Side) -->
       <div class="main-content">
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="pt">PT-BR</button>
+        </div>
+
         <!-- Navigation -->
         <nav class="main-nav">
-          <button class="nav-btn active" data-section="about">ABOUT</button>
-          <button class="nav-btn" data-section="resume">RESUME</button>
-          <button class="nav-btn" data-section="download">DOWNLOAD</button>
+          <button
+            class="nav-btn active"
+            data-section="about"
+            data-translate="nav.about"
+          >
+            ABOUT
+          </button>
+          <button
+            class="nav-btn"
+            data-section="resume"
+            data-translate="nav.resume"
+          >
+            RESUME
+          </button>
+          <button
+            class="nav-btn"
+            data-section="download"
+            data-translate="nav.download"
+          >
+            DOWNLOAD
+          </button>
         </nav>
 
         <!-- Content Box -->
@@ -92,8 +116,8 @@
           <!-- About Section -->
           <section id="about" class="content-section active">
             <div class="about-content">
-              <h2>Who am I?</h2>
-              <p>
+              <h2 data-translate="about.title1">Who am I?</h2>
+              <p data-translate="about.text1">
                 I am a technology and innovation enthusiast with a solid
                 background in Computer Science and Software Engineering
                 (Bachelor's degree) and an Associate degree in Software
@@ -104,8 +128,8 @@
                 into efficient and scalable solutions.
               </p>
 
-              <h2>Technical Expertise</h2>
-              <p>
+              <h2 data-translate="about.title2">Technical Expertise</h2>
+              <p data-translate="about.text2">
                 Throughout my professional journey, I have developed diverse
                 technical skills that enable me to work on different fronts. I
                 master essential tools and platforms such as Kubernetes, Docker,
@@ -122,7 +146,7 @@
 
             <!-- Projects Section -->
             <div class="projects-section">
-              <h2>PROJECTS</h2>
+              <h2 data-translate="projects.title">PROJECTS</h2>
               <div class="projects-grid">
                 <div class="project-card" data-project="1">
                   <div class="project-image">
@@ -310,8 +334,10 @@
           <section id="download" class="content-section">
             <div class="download-container">
               <div class="download-header">
-                <h2>Download Resume</h2>
-                <p>Get my complete resume in your preferred language</p>
+                <h2 data-translate="download.title">Download Resume</h2>
+                <p data-translate="download.subtitle">
+                  Get my complete resume in your preferred language
+                </p>
               </div>
 
               <div class="download-buttons">
@@ -320,7 +346,9 @@
                     <i class="fas fa-file-pdf"></i>
                   </div>
                   <div class="download-info">
-                    <span class="download-title">English Version</span>
+                    <span class="download-title" data-translate="download.btnEn"
+                      >English Version</span
+                    >
                     <span class="download-subtitle">Resume - EN.pdf</span>
                   </div>
                   <div class="download-arrow">
@@ -333,7 +361,9 @@
                     <i class="fas fa-file-pdf"></i>
                   </div>
                   <div class="download-info">
-                    <span class="download-title">Versão em Português</span>
+                    <span class="download-title" data-translate="download.btnPt"
+                      >Versão em Português</span
+                    >
                     <span class="download-subtitle">Currículo - PT-BR.pdf</span>
                   </div>
                   <div class="download-arrow">
@@ -344,7 +374,9 @@
 
               <div class="download-note">
                 <i class="fas fa-info-circle"></i>
-                <span>Last updated: October 2025</span>
+                <span data-translate="download.lastUpdated"
+                  >Last updated: October 2025</span
+                >
               </div>
             </div>
           </section>
@@ -369,6 +401,7 @@
       </div>
     </div>
 
+    <script src="./scripts/translations.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
 </html>

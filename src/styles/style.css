@@ -32,6 +32,7 @@ body {
   border: 1px solid #333;
   position: sticky;
   top: 40px;
+  margin-top: 50px;
 }
 
 .profile-header {
@@ -196,6 +197,45 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+  padding-top: 50px;
+}
+
+/* Language Switcher */
+.language-switcher {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 5px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid #333;
+  z-index: 100;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #999;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: #fff;
 }
 
 /* Navigation */
@@ -762,5 +802,15 @@ body {
 
   .content-box {
     padding: 25px;
+  }
+
+  .language-switcher {
+    position: static;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+
+  .main-nav {
+    margin-top: 0;
   }
 }
